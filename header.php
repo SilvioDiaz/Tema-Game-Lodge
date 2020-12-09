@@ -95,7 +95,7 @@
 		<?php
 			if(wp_is_mobile()){
 				echo "
-				<div class='contato_mobile'>
+				<div class='contato_mobile' style='	display: flex;	justify-content: center;'>
 					<h4><a class=' blackear nav-link' href= 'https://gamelodge.com.br/contato/'>Contato</a></h4>
 				</div>";
 			}else{
