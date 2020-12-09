@@ -45,11 +45,24 @@
 
 				</li>
 
+				<?php
+					if(!wp_is_mobile()){
+
+				?>
+				
 				<li class="nav-item">
 
-					<a class="nav-link" href= "https://gamelodge.com.br/contato/">Contato</a>
+				<a class="nav-link" href= "https://gamelodge.com.br/contato/">Contato</a>
 
 				</li>
+
+
+				<?php
+					}else{
+
+					}
+				?>
+
 
 				<li class="nav-item dropdown">
 
@@ -78,7 +91,17 @@
 			</div>
 
 		</div>
+					<!-- contato no celular -->
+		<?php
+			if(wp_is_mobile()){
+				echo "
+				<div class='contato_mobile'>
+					<h4><a class=' blackear nav-link' href= 'https://gamelodge.com.br/contato/'>Contato</a></h4>
+				</div>";
+			}else{
 
+			}
+		?>
 		<div>
 
 		<div id='twitch-embed'></div>

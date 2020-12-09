@@ -79,17 +79,31 @@
 
                 <h5>Desenvolvedora: <?=$review['desenvolvedora:_']?></h5>
 
-        <?php
-            if ($review['key_recebida'] == 1){
-                echo "<p>Está crítica foi escrita usando uma key enviada para o Game Lodge pela assessoria da ". $review['publisher:'].  "</p>";
-            } 
-        }else{
+                <div>
+                <h5>Plataformas Disponívies:</h5>
+                <?php           
+    
+                foreach($review['plataforma'] as $plataformas){
+                    echo "<p>".$plataformas."</p>";
+                }
+
+                ?>
+                </div>
+
+                <?php
+                    if ($review['key_recebida'] == 1){
+                        echo "<p>Está crítica foi escrita usando uma key enviada para o Game Lodge pela assessoria da ". $review['publisher:'].  "</p>";
+                    } 
+                }else{
 
 
+                }
 
-        }
+                ?>
 
-        ?>
+        
+
+     
 
     </div>
     </div>

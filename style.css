@@ -39,7 +39,8 @@ svg:hover {
 
 p{
     font-family: "Georgia Regular";
-    font-size: 20px;
+    font-size: 23px;
+    word-spacing: 1px;
 }
 
 
@@ -279,9 +280,9 @@ footer{
 .areaPost{
     margin: 1rem 0;
     text-align: justify;
-    padding:2rem;
+    padding:5rem;
     background-color: #f8f9fa;
-    font-size: 19.5px;
+    padding: 2rem 5rem;
 }
 
 .areaPost a{
@@ -459,6 +460,11 @@ height: 100%
         margin: 2rem 0;
     }
 
+    .contato_mobile{
+        display: flex;
+        justify-content: center;
+    }
+
     /* ARQUIVO */
 
     .arquivo{
@@ -491,7 +497,7 @@ height: 100%
         margin: 1rem 2rem;
         background-color: #f8f9fa;
         color: #212529;
-        width: auto;
+        width: 42%;
     }
 
     .navPosts{
@@ -570,6 +576,16 @@ height: 100%
         list-style-type: none;
     }
 
+    /* 404 */
+
+    .erro404{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+        }
+
 
 @media only screen and (max-width: 768px) {
     .contato{
@@ -625,6 +641,14 @@ height: 100%
 }
 
 @media only screen and (max-width: 1367px){
+
+    p{
+        font-size: 19px;
+    }
+
+    .areaPost{
+        padding: 3rem;
+    }
 
     .navbar{
         justify-content: center;
