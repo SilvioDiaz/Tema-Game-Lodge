@@ -51,62 +51,58 @@
         </div>
 
         <div class="post">
+            <div class=" paginacritica row">
+                <div class="col-sm-12 col-md-12 col-lg-5 areaPost">
 
 
 
+                    <div id class="conteudo"> <?php $verificador = the_content(); ?></div>
+
+                </div>
+                <?php 
+
+if(get_fields()){
+
+?>
+ <div class="col-sm-12 col-md-12 col-lg-5 areaCritica">
+    <div class="critica">
+
+        <h5>Nome do jogo:</h5> <p><?=$review['nome_do_jogo:']?></p>
+
+        <h5>Publisher:</h5> <p><?=$review['publisher:']?></p>
+
+        <h5>Desenvolvedora:</h5> <p><?=$review['desenvolvedora:_']?></p>
+
+        <div>
+        <h5>Plataformas Disponívies:
+        <?php           
+
+        foreach($review['plataforma'] as $plataformas){
+            echo "<p>".$plataformas."</p>";
+        }
+
+        ?>
+        </div>
+        </h5>
+        <?php
+            if ($review['key_recebida'] == 1){
+                echo "<p>Está crítica foi escrita usando uma key enviada para o Game Lodge</p>";
+            } 
+        }else{
 
 
-            <div class="col-sm-12 col-md-12 col-lg-5 areaPost">
+        }
 
+        ?>
 
+    </div>
+</div>
 
-                <div id class="conteudo"> <?php $verificador = the_content(); ?></div>
-
-            </div>
+</div>
+              
         </div>
 
-        <?php 
-
-            if(get_fields()){
-
-            ?>
-    <div class="areaCritica">
-            <div class="critica">
-
-                <h5>Nome do jogo: <?=$review['nome_do_jogo:']?></h5>
-
-                <h5>Publisher: <?=$review['publisher:']?></h5>
-
-                <h5>Desenvolvedora: <?=$review['desenvolvedora:_']?></h5>
-
-                <div>
-                <h5>Plataformas Disponívies:</h5>
-                <?php           
-    
-                foreach($review['plataforma'] as $plataformas){
-                    echo "<p>".$plataformas."</p>";
-                }
-
-                ?>
-                </div>
-
-                <?php
-                    if ($review['key_recebida'] == 1){
-                        echo "<p>Está crítica foi escrita usando uma key enviada para o Game Lodge pela assessoria da ". $review['publisher:'].  "</p>";
-                    } 
-                }else{
-
-
-                }
-
-                ?>
-
-        
-
-     
-
-    </div>
-    </div>
+  
     </div>
 
 
@@ -118,7 +114,7 @@
 
 
 
-
+    </div>
 
 
 
@@ -128,7 +124,7 @@
 ?>
 
 
-
+</div>
 
 
 <?php get_footer('footer'); ?>

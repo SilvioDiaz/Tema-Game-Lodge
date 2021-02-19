@@ -35,15 +35,22 @@
 
 				<li class="nav-item">
 
-					<a class="nav-link" href= "http://gamelodge.com.br/category/critica/" >Críticas</a>
+					<a class="nav-link" href= "https://gamelodge.com.br/category/critica/" >Críticas</a>
 
 				</li>
 
 				<li class="nav-item">
 
-					<a class="nav-link" href= "http://gamelodge.com.br/category/reportagens/" >Reportagens</a>
+					<a class="nav-link" href= "https://gamelodge.com.br/category/reportagens/" >Reportagens</a>
 
 				</li>
+
+				<li class="nav-item">
+
+					<a class="nav-link" href= "https://gamelodge.com.br/category/podcast/" >Podcast</a>
+
+				</li>
+
 
 				<?php
 					if(!wp_is_mobile()){
@@ -70,13 +77,13 @@
 
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-							<a class="dropdown-item" href="http://gamelodge.com.br/category/opiniao/">Opinião</a>
+							<a class="dropdown-item" href="https://gamelodge.com.br/category/opiniao/">Opinião</a>
 
-							<a class="dropdown-item" href="http://gamelodge.com.br/category/indicacao/">Indicação</a>
+							<a class="dropdown-item" href="https://gamelodge.com.br/category/indicacao/">Indicação</a>
 
-							<a class="dropdown-item" href="http://gamelodge.com.br/category/guia/">Guias</a>
+							<a class="dropdown-item" href="https://gamelodge.com.br/category/guia/">Guias</a>
 
-							<a class="dropdown-item" href="http://gamelodge.com.br/category/web-stories/" >Notícias</a>
+							<a class="dropdown-item" href="https://gamelodge.com.br/category/web-stories/" >Notícias</a>
 
 				</li>
 

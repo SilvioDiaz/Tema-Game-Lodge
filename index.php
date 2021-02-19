@@ -8,7 +8,7 @@
 
     <?php
 
-    $query = new WP_Query(array('posts_per_page' => 1, 'category__not_in' => array(2, 472)));
+    $query = new WP_Query(array('posts_per_page' => 1, 'category__not_in' => array(2, 472,5)));
 
 
 
@@ -80,7 +80,7 @@
 
     <div class="col-sm-12 col-md-12 col-lg-12">
 
-        <a href="http://gamelodge.com.br/category/critica/"><h1 class="branquear chamada">Críticas</h1></a>
+        <a href="https://gamelodge.com.br/category/critica/"><h1 class="branquear chamada">Críticas</h1></a>
 
         <div class="owl-carousel">
 
@@ -160,7 +160,7 @@
 
     <div class="col-sm-12 col-md-8 col-lg-8">
 
-        <a href="#"><h1 class="branquear chamada">Notícias da Semana</h1></a>
+        <a href="https://gamelodge.com.br/category/noticia-da-semana/"><h1 class="branquear chamada">Notícias</h1></a>
 
         <?php
 
@@ -230,7 +230,7 @@
 
     <div class="col-sm-12 col-md-4 col-lg-4">
 
-        <a href="#"><h1 class="branquear chamada">Stories</h1></a>
+        <a href="https://gamelodge.com.br/web-stories"><h1 class="branquear chamada">Stories</h1></a>
 
         <div class="areaNoticia">
 
@@ -396,7 +396,7 @@
 
     <div class="col-sm-12 col-md-12 col-lg-12">
 
-        <a href="http://gamelodge.com.br/category/indicacao/"><h1 class="branquear chamada">Indicações</h1></a>
+        <a href="https://gamelodge.com.br/category/indicacao/"><h1 class="branquear chamada">Indicações</h1></a>
 
         <div class="owl-carousel">
 
@@ -478,7 +478,7 @@
 
 
 
-<a href="#"><h1 class="chamada offlodgeChamada">Podcast</h1></a>
+<a href="https://gamelodge.com.br/category/podcast/"><h1 class="chamada offlodgeChamada">Podcast</h1></a>
 
     <div class="row">
 
@@ -492,45 +492,31 @@
 
             while ($query->have_posts()) : $query->the_post();
 
-
-
-
-
-
-
                 $imagemPrincipal = get_the_post_thumbnail_url(get_the_ID(), 'full');
-
-
 
                 if ($query->current_post == 0) {
 
                     $my_class = ' first'
 
-
-
         ?>
-
-
 
                     <div class="col-sm-12 col-md-12 col-lg-8">
 
-                        <div id='imgJogo_Semana' class="imgJogo_Semana postPrincipal" style='background: url(" <?= $imagemPrincipal ?> ");background-size: cover;background-position:center'></div>
+                        <div id='imgJogo_Semana' class="imgJogo_Semana postPrincipal" 
+                        style='background: url(" <?= $imagemPrincipal ?> ");background-size: cover;background-position:center'>
 
 
+                            <div class="PostDescription">
 
+                                <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
 
+                                <div class="nomeAutor">
 
-                        <div class="PostDescription">
+                                <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"> <h6 class="chamada chamadaAutor branquear">Escrito por <?= get_the_author_meta('display_name') ?></h6></a>
 
-                            <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-
-                            <div class="nomeAutor">
-
-                            <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"> <h6 class="chamada chamadaAutor branquear">Escrito por <?= get_the_author_meta('display_name') ?></h6></a>
+                                </div>
 
                             </div>
-
-
 
                         </div>
 
@@ -546,13 +532,10 @@
 
                     } else {
 
-
-
                         ?>
 
-
-
-                                <div id='imgOfflodge_lateral' class="imgOfflodge_lateral" style='background: url(" <?= $imagemPrincipal ?> ");background-size: cover;background-position:center'>
+                                <div id='imgOfflodge_lateral' class="imgOfflodge_lateral" style='background: url(" <?= $imagemPrincipal ?> ");
+                                background-size: cover;background-position:center'>
 
                                     <div class="esquerdar"></div>
 
@@ -626,7 +609,7 @@
 
         <div class="col-sm-12 col-md-8 col-lg-8">
 
-        <a href="http://gamelodge.com.br/category/opiniao/"><h1 class="branquear chamada">Opinião</h1></a>
+        <a href="https://gamelodge.com.br/category/opiniao/"><h1 class="branquear chamada">Opinião</h1></a>
 
             <?php
 
@@ -698,7 +681,7 @@
 
         <div class="col-sm-12 col-md-4 col-lg-4">
 
-        <a href="http://gamelodge.com.br/category/guia/"><h1 class="branquear chamada">Guias</h1></a>
+        <a href="https://gamelodge.com.br/category/guia/"><h1 class="branquear chamada">Guias</h1></a>
 
             <?php
 
