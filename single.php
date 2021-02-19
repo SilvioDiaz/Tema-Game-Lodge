@@ -64,7 +64,7 @@
 if(get_fields()){
 
 ?>
- <div class="col-sm-12 col-md-12 col-lg-5 areaCritica">
+ <div class="col-sm-12 col-md-12 col-lg-3 areaCritica">
     <div class="critica">
 
         <h5>Nome do jogo:</h5> <p><?=$review['nome_do_jogo:']?></p>
@@ -75,12 +75,20 @@ if(get_fields()){
 
         <div>
         <h5>Plataformas Disponívies:
-        <?php           
+        <?php    
 
+        echo "<p>";
+        $numItems = count($review['plataforma']);
+        $i = 0;
+        $virgula = ",";
         foreach($review['plataforma'] as $plataformas){
-            echo "<p>".$plataformas."</p>";
+     
+            if(++$i === $numItems) {
+                $virgula = "";
+            }
+            echo $plataformas. $virgula;
         }
-
+        "</p>";
         ?>
         </div>
         </h5>
