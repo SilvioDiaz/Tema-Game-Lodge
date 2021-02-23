@@ -592,8 +592,50 @@ height: 100%
         padding: 2rem;
         }
 
+    
+        /* REPORTAGEM */
+        .areaReportagem{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .quadradoreportagem{
+            height: 400px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .alinharQuadrados{
+            padding: 0;
+            margin: 0;
+
+        }
+
+          
+        .paddingReportagem{
+            padding-left: 2rem;
+        }
+
+        /* STORIE */
+
+        .imgStorie{
+            height: 200px;
+        }
+
+        .paddingStorie{
+            padding-right: 2rem;
+        }
+  
+    
 
 @media only screen and (max-width: 768px) {
+      
+    .paddingReportagem{
+        padding-left: 1rem;
+    }
+    
+    .paddingStorie{
+        padding-right: 0;
+    }
     .contato{
         height: 100%;
         display: flex;

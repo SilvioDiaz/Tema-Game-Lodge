@@ -154,133 +154,55 @@
 
 </div>
 
-<!-- Jogo da Semana -->
+<!-- Reportagem-->
+    <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-7 paddingReportagem">
+           
 
-<div class="row espacoNoticia">
+                <a href="https://gamelodge.com.br/category/noticia-da-semana/"><h1 class="branquear chamada">Reportagens</h1></a>
+                <div class="areaReportagem">
+                <?php
 
-    <div class="col-sm-12 col-md-8 col-lg-8">
-
-        <a href="https://gamelodge.com.br/category/noticia-da-semana/"><h1 class="branquear chamada">Notícias</h1></a>
-
-        <?php
-
-        $query = new WP_Query(array('posts_per_page' => 1, 'category__in' => 712));
-
-
-
-        if ($query->have_posts()) :
-
-            while ($query->have_posts()) : $query->the_post();
+                $query = new WP_Query(array('posts_per_page' => 6, 'category__in' => 5));
 
 
 
-                $imagemPrincipal = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                if ($query->have_posts()) :
+
+                    while ($query->have_posts()) : $query->the_post();
 
 
 
-        ?>
-
-                <div class="row">
-
-                    <div class="col-sm-12 col-md-12 col-lg-12">
-
-                        <div id='imgJogo_Semana' class="imgJogo_Semana postPrincipal" style='background: url(" <?= $imagemPrincipal ?>");background-size: cover'>
-
-                            <div class="esquerdar">
-
-                                <div class="descritionPosition">
-
-                                    <div class="PostDescription">
-
-                                        <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-        <?php endwhile;
+                        $imagemPrincipal = get_the_post_thumbnail_url(get_the_ID(), 'full');
 
 
 
-
-
-
-
-
-
-        else :
-
-            echo '<p>Não temos posts</p>';
-
-        endif;
-
-        ?>
-
-    </div>
-
-    <!-- Notícia -->
-
-    <div class="col-sm-12 col-md-4 col-lg-4">
-
-        <a href="https://gamelodge.com.br/web-stories"><h1 class="branquear chamada">Stories</h1></a>
-
-        <div class="areaNoticia">
-
-            <?php
-
-            $query = new WP_Query(array('posts_per_page' => 3, 'post_type' => 'web-story'));
-
-
-
-            if ($query->have_posts()) :
-
-                while ($query->have_posts()) : $query->the_post();
-
-
-
-                    $imagemPrincipal = get_the_post_thumbnail_url(get_the_ID(), 'full');
-
-
-
-            ?>
-
-
-
-                    <div id='imgNoticia' class="imgNoticia" style='background: url(" <?= $imagemPrincipal ?>");background-size: cover'>
-
+                ?>
+                
+           
+                <div class="col-sm-12 col-md-6 col-lg-6 alinharQuadrados">
+                    <div class="quadradoreportagem" id='reportagemPost' style='background: url(" <?= $imagemPrincipal ?> ");background-size: cover;background-position:center'>
+                    
                         <div class="esquerdar">
 
                             <div class="descritionPosition">
-
                                 <div class="PostDescription noticiaDescription">
 
-                                    <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+                            <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
 
 
 
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
 
-
-
-
+                </div>
+                
 
             <?php endwhile;
 
-
+                
 
 
 
@@ -296,55 +218,43 @@
 
             ?>
 
-            
-
         </div>
+        </div>
+    <!-- Stories -->
 
-    </div>
+        <div class="col-sm-12 col-md-4 col-lg-5 paddingStorie">
 
-</div>
+            <a href="https://gamelodge.com.br/web-stories"><h1 class="branquear chamada">Stories</h1></a>
 
-<!-- Reportagem -->
+                <?php
 
-
-
-<div class="col-sm-12 col-md-12 col-lg-12 toCol reportagemEspacamento">
-
-    <?php
-
-    $query = new WP_Query(array('posts_per_page' => 1, 'category__in' => 5));
+                $query = new WP_Query(array('posts_per_page' => 6, 'post_type' => 'web-story'));
 
 
 
-    if ($query->have_posts()) :
+                if ($query->have_posts()) :
 
-        while ($query->have_posts()) : $query->the_post();
-
-
-
-            $imagemPrincipal = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                    while ($query->have_posts()) : $query->the_post();
 
 
 
-    ?>
+                        $imagemPrincipal = get_the_post_thumbnail_url(get_the_ID(), 'full');
 
 
 
-            <div class="postPrincipal" id='postReportagem' style='background: url(" <?= $imagemPrincipal ?> ");background-size: cover;background-position:center'>
+                ?>
+
+                <div id="imgNoticia" class="imgNoticia imgStorie" style='background: url(" <?= $imagemPrincipal ?> ");background-size: cover;background-position:center'>
 
                 <div class="esquerdar">
 
                     <div class="descritionPosition">
 
-                        <div class="PostDescription">
+                        <div class="PostDescription noticiaDescription">
 
-                            <h1><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
+                        <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
 
-                            <div class="nomeAutor">
 
-                            <a class="chamada" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"> <h6 class="chamada chamadaAutor branquear">Escrito por <?= get_the_author_meta('display_name') ?></h6></a>
-
-                            </div>
 
                         </div>
 
@@ -352,34 +262,31 @@
 
                 </div>
 
+                </div>
 
 
-        <?php endwhile;
-
-
-
-
+                <?php endwhile;
 
 
 
 
 
-    else :
-
-        echo '<p>Não temos posts</p>';
-
-    endif;
-
-        ?>
 
 
 
-            </div>
 
-</div>
+                else :
+
+                    echo '<p>Não temos posts</p>';
+
+                endif;
+
+                ?>
+        </div>
+            
 
 
-
+    </div>
 
 
 <!-- Colunas -->
