@@ -624,6 +624,23 @@ height: 100%
         .paddingStorie{
             padding-right: 2rem;
         }
+
+        table{
+            text-align: center;
+        }
+        
+        td{
+            border:solid #212529;
+            width: 200px;
+            text-align: center;
+            
+        }
+        
+        th{
+            border:solid #212529;
+            padding: 0.5rem;
+            text-align:center;
+        }
   
     
 
@@ -730,6 +747,9 @@ height: 100%
 }
 
 @media (max-height: 720px){
+	
+
+	
     .postPrincipal{
         height: 450px;
     }
@@ -744,10 +764,6 @@ height: 100%
 
     .offDescription h2{
         font-size: medium;
-    }
-
-    .imgNoticia{
-        height: 26.2%;
     }
 
     .noticiaDescription{
