@@ -41,6 +41,7 @@ p{
     font-family: "Georgia Regular";
     font-size: 23px;
     word-spacing: 1px;
+    line-height: 43px;
 }
 
 
@@ -645,6 +646,10 @@ height: 100%
     
 
 @media only screen and (max-width: 768px) {
+
+    p{
+        padding: 0 1rem;
+    }
       
     .paddingReportagem{
         padding-left: 1rem;

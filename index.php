@@ -159,7 +159,7 @@
         <div class="col-sm-12 col-md-8 col-lg-7 paddingReportagem">
            
 
-                <a href="https://gamelodge.com.br/category/noticia-da-semana/"><h1 class="branquear chamada">Reportagens</h1></a>
+                <a href="https://gamelodge.com.br/category/reportagens/"><h1 class="branquear chamada">Reportagens</h1></a>
                 <div class="areaReportagem">
                 <?php
 
